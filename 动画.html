@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 300px;
+				height: 300px;
+				margin: 20px auto;
+				background-color: #2E6DA4;
+				-webkit-transition: all 0.5s; 
+			}
+			.box:hover{
+				background-color: palegoldenrod;
+				width: 500px;
+				height: 500px;
+			}
+			.w{
+				width: 100px;
+				height: 190px;
+				background-image: url(img/图片1.png);
+				background-position: 0PX 0PX;
+				-webkit-transition: background-position 5s ease .1s;
+			}
+			.w:hover{
+				background-position: -550px 0px;
+			}
+			.s{
+				width: 400px;
+				height: 400px;
+				border: solid 1px red;
+				-webkit-animation: color 5s;
+				animation-iteration-count: infinite;/*无限次播放*/
+			}
+			@-webkit-keyframes color{
+				0%   {background: red; left:0px; top:0px;}
+				25%  {background: yellow; left:200px; top:0px;}
+				50%  {background: blue; left:200px; top:200px;}
+				75%  {background: green; left:0px; top:200px;}
+				100% {background: red; left:0px; top:0px;}
+             }
+           .tem{
+           	-webkit-column-count: 3;
+           	-webkit-column-gap: 30px;
+           	-webkit-column-rule:3px outset #ff0000;
+           }
+			.tim{
+				width: 400px;
+				padding: 20px 20px;
+				border: solid 3px red;
+				resize:both;
+                overflow:auto;
+			}
+			div.container{
+				width: 30em;
+				border: solid  1em;
+			}
+			div.box1{
+				width: 50%;
+				border: solid 1em red;
+				box-sizing: border-box;
+				float: left;
+			}
+			div.bo{
+				width: 300px;
+				height: 50px;
+				margin: 30px;
+				padding: 10px;
+				border: solid 2px red;
+				outline: solid 1px yellow;
+				outline-offset: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+		</div>
+		<div class="w"></div>
+		<div class="s"></div>
+		<p><b>注释：</b>Internet Explorer 不支持 column-count 属性。</p>
+	     <div class="tem">人民网北京2月24日电 (记者 刘阳)国家发展改革委近日发出通知，决定自2月25日零时起将汽、柴油价格每吨分别提高300元和290元，折算到90号汽油和0号柴油（全国平均）每升零售价格分别提高0.22元和0.25元。
+
+此次国内成品油价格调整幅度，是按照现行国内成品油价格形成机制，根据国际市场油价变化情况确定的。去年11月16日国内成品油价格调整以来，受市场预期欧美经济复苏前景向好以及中东局势持续动荡等因素影响，国际市场原油价格先抑后扬，2月上旬WTI和布伦特原油期货价格再次回升至每桶95美元和115美元以上。虽然近两日价格有所回落，但国内油价挂钩的国际市场三种原油连续22个工作日移动平均价格上涨幅度已超过4%，达到国内成品油价格调整的边界条件。
+
+通知指出，这次成品油调价后，国家将按照已建立的补贴机制，继续对种粮农民、渔业（含远洋渔业）、林业、城市公交、农村道路客运（含岛际和农村水路客运）等给予补贴。同时，为保证市场物价基本稳定，防止连锁涨价，对与居民生活密切相关的铁路客运、城市公交、农村道路客运（含岛际和农村水路客运）价格不作调整。
+
+通知要求，中石油、中石化、中海油三大公司要组织好成品油生产和调运，保持合理库存，加强综合协调和应急调度，保障成品油供应。各级价格主管部门要加大市场监督检查力度，依法查处不执行国家价格政策，以及囤积居奇、造谣惑众、合谋涨价、搭车涨价等违法行为，维护正常市场秩序。</div>
+	
+	<div class="tim">resize 属性规定是否可由用户调整元素尺寸。</div>
+
+    <p><b>注释：</b> Firefox 4+、Safari 以及 Chrome 支持 resize 属性。</p>
+
+	
+	
+	<div class="container">
+    <div class="box1">这个 div 占据左半部分。</div>
+    <div class="box1">这个 div 占据右半部分。</div>
+    </div>
+    </br>
+    <p><b>注释：</b>Internet Explorer 和 Opera 不支持 support outline-offset 属性。</p>
+    <div class="bo">这个 div 在边框边缘之外 15 像素处有一个轮廓。</div>
+	</body>
+</html>
