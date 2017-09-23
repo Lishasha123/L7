@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.wrap{
+				width: 200px;
+				margin: 40px auto;
+				-webkit-perspective: 1000px;
+			}
+			.cube{
+				width: 200px;
+				height: 200px;
+				position: relative;
+				-webkit-transform-style:preserve-3d;
+				-webkit-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+			}
+			
+			.cube .item{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 200px;
+				height: 200px;
+				font-size: 100px;
+				text-align: center;
+				line-height: 200px;
+				color: white;
+			}
+		  .cube .item-1{
+				background-color: rgba(100,0,0,0.5);
+				-webkit-transform: translateZ(-100px);
+				-webkit-animation: color 2s 0.5s linear infinite;
+			}
+			@-webkit-keyframes color{
+				0%   {background: red; left:0px; top:0px;}
+				25%  {background: yellow; left:200px; top:0px;}
+				50%  {background: blue; left:200px; top:200px;}
+				75%  {background: green; left:0px; top:200px;}
+				100% {background: red; left:0px; top:0px;}
+             }
+			
+			.cube .item-2{
+				background-color: rgba(255,0,0,0.5);
+				-webkit-transform:translateX(-100px) rotateY(90deg) ;
+			}
+			.cube .item-3{
+				background-color: rgba(0,0,100,0.5);;
+				-webkit-transform: translateX(100px) rotateY(90deg);
+			}
+			.cube .item-4{
+				background-color: rgba(0,0,255,0.5);;
+				-webkit-transform: translateY(-100px) rotateX(90deg);
+			}
+			.cube .item-5{
+				background-color: rgba(255,255,0,0.5);;
+				-webkit-transform: translateY(100px) rotateX(90deg);
+			}
+			.cube .item-6{
+				background-color: rgba(0,0,200,0.5);;
+				opacity: 0.5;
+				-webkit-transform: translateZ(100px);
+			}
+		</style>
+	</head>
+	<body>
+			<div class="wrap">
+			<div class="cube">
+				<div class="item item-1">1</div>
+				<div class="item item-2">2</div>
+				<div class="item item-3">3</div>
+				<div class="item item-4">4</div>
+				<div class="item item-5">5</div>
+				<div class="item item-6">6</div>
+			</div>
+		</div>
+		<input type="range" id="range" value="0"  min="0" max="360" /></br>
+		<input type="range" id="rangeX" value="0"  min="0" max="360" /></br>
+		<input type="range" id="rangeY" value="0" min="0" max="360" /></br>
+		<input type="range" id="rangeZ" value="0" min="0" max="360" /></br>
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript">
+			$("#range").on("input propetrychange",function(){
+				var r=$(this).val();
+				$(".cube").css("-webkit-transform","rotateX("+r+"deg) rotateY("+r+"deg) rotateZ("+r+"deg)")
+			});
+				$("#rangeX").on("input propetrychange",function(){
+				var r=$(this).val();
+				$(".cube").css("-webkit-transform","rotateX("+r+"deg) rotateY("+0+"deg) rotateZ("+0+"deg)")
+			});
+				$("#rangeY").on("input propetrychange",function(){
+				var r=$(this).val();
+				$(".cube").css("-webkit-transform","rotateX("+0+"deg) rotateY("+r+"deg) rotateZ("+0+"deg)")
+			});
+					$("#rangeZ").on("input propetrychange",function(){
+				var r=$(this).val();
+				$(".cube").css("-webkit-transform","rotateX("+0+"deg) rotateY("+0+"deg) rotateZ("+r+"deg)")
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*.clear{
+				content: "";
+				display: block;
+				clear: both;
+			}*/
+			.box{
+				  margin: 100px auto;
+				  width: 600px;
+				  position: relative;
+				  -webkit-perspective: 1000px;
+				  }
+			.img{
+				width: 600px;
+				height: 200px;
+			}
+			.back{
+				width: 600px;
+				height: 200px;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				overflow: hidden;
+				/*background-image: url(img/Lighthouse.jpg);
+				background-position: center;*/
+				/*-webkit-transform: translateZ(-150px) translateX(0px);
+				-webkit-animation: back-action 5s linear infinite;
+				*/
+			}
+			.back ul{
+				width: 5400px;
+				list-style: none;
+				padding: 0px;
+				margin: 0px;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				-webkit-transform: translateZ(-100px) translateX(0px);
+				-webkit-animation: back-action 2s linear infinite;
+			}
+			.back ul li{
+				margin: 0px;
+				padding: 0px;
+				float: left;
+			}
+			.back img{
+				width: 600px;
+				height: 200px;
+			}
+			.foot{
+				width: 660px;
+				height: 200px;
+				position: absolute;
+				left: -30px;
+				top: 0px;
+				background-image: url(img/2017-09-23_123207.jpg);
+				background-color: gray;
+				-webkit-transform: translateY(100px)  rotateX(90deg);
+			}
+			
+			.man{
+				width: 104px;
+				height: 110px;
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				z-index: 3;
+				background-image: url(img/man1.png);
+				-webkit-transform: translateX(0px) translateY(0px);
+				-webkit-animation: run 5s 0.2s linear infinite;
+				-webkit-animation-play-state: running;
+			}
+			.zoo{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				bottom: 0px;
+				left: 150px;
+				background-image: url(img/dog1.fw.png);
+				background-size: 100px 100px;
+				background-position: bottom;
+				-webkit-transform: translateX(0px);
+				-webkit-animation: color 5s 0.2s linear infinite;
+			}
+			.btn{
+				width: 260px;
+				height: 50px;
+				background-color: orange;
+				margin: 100px auto;
+			}
+			.btn button{
+				width: 50px;
+				height: 30px;
+				border-radius:5%;
+				margin-top: 10px;
+				margin-left: 10px;
+				background-color: cornflowerblue;
+				color: white;
+			}
+			.btn button:hover{
+				background-color:red;
+				color: black;
+			}
+			@-webkit-keyframes run{
+				0%{
+					background-image: url(img/man1.png);
+					-webkit-transform: translateX(0px);
+				}
+				10%{
+					background-image: url(img/man2.png);
+					-webkit-transform: translateX(50px);
+				}
+				20%{
+					background-image: url(img/man3.png);
+					-webkit-transform: translateX(100px);
+				}
+				30%{
+					background-image: url(img/man4.png);
+					-webkit-transform: translateX(150px);
+				}
+				40%{
+					background-image: url(img/man5.png);
+					-webkit-transform: translateX(200px);
+				}
+				50%{
+					background-image: url(img/man6.png);
+					-webkit-transform: translateX(250px);
+				}
+				60%{
+					background-image: url(img/man7.png);
+					-webkit-transform: translateX(300px);
+				}
+				70%{
+					background-image: url(img/man8.png);
+					-webkit-transform: translateX(350px);
+				}
+				80%{
+					background-image: url(img/man9.png);
+					-webkit-transform: translateX(400px);
+				}
+				90%{
+					background-image: url(img/man1.png);
+					-webkit-transform: translateX(500px);
+				}
+				100%{
+					background-image: url(img/man2.png);
+					-webkit-transform: translateX(0px);
+				}
+			}
+			@-webkit-keyframes color{
+				0%{
+					background-image: url(img/dog1.fw.png);
+					-webkit-transform: translateX(0px);
+				}
+				10%{
+					background-image: url(img/dog2.fw.png);
+					-webkit-transform: translateX(20px);
+				}
+				20%{
+					background-image: url(img/dog3.fw.png);
+					-webkit-transform: translateX(50px);
+				}
+				30%{
+					background-image: url(img/dog4.fw.png);
+					-webkit-transform: translateX(70px);
+				}
+				40%{
+					background-image: url(img/dog5.fw.png);
+					-webkit-transform: translateX(90px);
+				}
+				50%{
+					background-image: url(img/dog6.fw.png);
+					-webkit-transform: translateX(110px);
+				}
+				60%{
+					background-image: url(img/dog7.fw.png);
+					-webkit-transform: translateX(130px);
+				}
+				70%{
+					background-image: url(img/dog8.fw.png);
+					-webkit-transform: translateX(150px);
+				}
+				80%{
+					background-image: url(img/dog9.fw.png);
+					-webkit-transform: translateX(170px);
+				}
+				90%{
+					background-image: url(img/dog10.fw.png);
+					-webkit-transform: translateX(200px);
+				}
+				100%{
+					background-image: url(img/dog1.fw.png);
+				    -webkit-transform: translateX(0px);
+				}
+			}
+			@-webkit-keyframes back-action{
+				0%{
+					left: 0px;
+				 /* -webkit-transform: translateX(0px);*/
+				}
+				15%{
+					left: -600px;
+					/*-webkit-transform: translateX(-100px);*/
+				}
+				25%{
+					left: -1200px;
+					/*-webkit-transform: translateX(-200px);*/
+				}
+				35%{
+					left: -1800px;
+					/*-webkit-transform: translateX(-300px);*/
+				}
+				45%{
+					left: -2400px;
+					/*-webkit-transform: translateX(-400px);*/
+				}
+				55%{
+					left: -3000px;
+					/*-webkit-transform: translateX(-500px);*/
+				}
+				65%{
+					left: -3600px;
+					/*-webkit-transform: translateX(-600px);*/
+				}
+				75%{
+					left: -4200px;
+					/*-webkit-transform: translateX(-700px);*/
+				}
+				85%{
+					left: -4800px;
+					/*-webkit-transform: translateX(-800px);*/
+				}
+				90%{
+					left: -5400px;
+					/*-webkit-transform: translateX(-800px);*/
+				}
+				100%{
+					left: 0px;
+				    /*-webkit-transform: translateX(0px);*/
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="img">
+			<div class="back">
+				<ul class="tem">
+					<li><img src="img/d328ab8f8bcf1688-cee9f2791250b5c7-05c619f8e1c8a4c18ddfee4a39c4eb76.jpg"></li>
+					<li><img src="img/d328ab8f8bcf1688-cee9f2791250b5c7-9896a39a6cba8aa2ee818771a644d178.jpg"></li>
+					<li><img src="img/d328ab8f8bcf1688-f5a5872f46835f3e-2c2627ce7a2db0a3f4eb0285c2e32737.jpg"></li>
+					<li><img src="img/d328ab8f8bcf1688-f5a5872f46835f3e-2a9c481d17d6ac70c1bb9ee937cf471d.jpg"> </li>
+					<li><img src="img/d328ab8f8bcf1688-f5a5872f46835f3e-32a39768f3e9fe7e86bf389fdf928139.jpg"></li>
+					<li><img src="img/d328ab8f8bcf1688-f5a5872f46835f3e-f8e8c169c1396ed55c596011719a8bf2.jpg"></li>
+					<li><img src="img/d328ab8f8bcf1688-f5a5872f46835f3e-2399f4d755f150283b4b6d792c46a77e.jpg"></li>
+					<li><img src="img/74ebe0bf8b246922-9ed95250ed51e3c2-e552ee8cf4be0c5968ff045c034a9915.jpg"></li>
+					<li><img src="img/d328ab8f8bcf1688-cee9f2791250b5c7-05c619f8e1c8a4c18ddfee4a39c4eb76.jpg"></li>
+					
+				</ul>
+          </div>
+			<div class="foot"></div>
+			</div>
+			<div class="man tem"></div>
+			<div class="zoo tem"></div>
+		</div>
+		<div class="btn">
+		<button class="start">开始</button>
+	     <button class="top">上</button>
+		<button class="down">下</button>
+		<button class="end">结束</button>
+		</div>
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript">
+		$(".top").mouseup(function(){
+				$(".man").css("-webkit-animation-play-state","running");
+				$(".man").css("bottom",""+0+"px");
+			});
+		  $(".top").mousedown(function(){
+		  	var r=Math.random()*100+100;
+		  	$(".man").css("-webkit-animation-play-state","paused");
+		  	 $(".man").css("bottom",""+r+"px");
+		  	 });
+		  	 
+		  $(".down").mouseup(function(){
+				$(".man").css("-webkit-animation-play-state","running");
+				$(".man").css("bottom",""+0+"px");
+			});
+		 $(".down").mousedown(function(){
+		  	var s=Math.random()*20+40;
+		  	console.log(s);
+		  	$(".man").css("-webkit-animation-play-state","paused");
+		  	 $(".man").css("bottom",""+s*-1+"px");
+		  });
+		  $(".start").mousedown(function(){
+		  	$(".tem").css("-webkit-animation-play-state","running");
+		  });
+		  $(".end").mousedown(function(){
+		  	$(".tem").css("-webkit-animation-play-state","paused");
+		  });
+		  	 
+		</script>
+	</body>
+</html>

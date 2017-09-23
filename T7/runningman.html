@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.body{
+				width: 86px;
+				height: 274px;
+				/*background-color: red;*/
+				margin: 20px auto;
+				position: relative;
+				-webkit-animation: body-action 2s linear infinite;
+			}
+			
+			.body div{
+				position: absolute;
+			}
+			
+			.right-bicep{
+				width: 51px;
+				height: 124px;
+				top: 87px;
+				left: 6px;
+				-webkit-transform-origin:27px 32px;
+				-webkit-animation: right-bicep-action 2s linear infinite;
+			}
+			.right-forearm{
+				width:36px;
+				height: 121px;
+				top: 99px;
+				left: 14px;
+				-webkit-transform-origin:15px 12px;
+				-webkit-animation: right-forearm-action 2s linear infinite;
+			}
+			.left-bicep{
+				width: 52px;
+				height: 124px;
+				top: 87px;
+				left: 6px;
+				z-index: -2;
+				-webkit-transform-origin:27px 32px;
+				-webkit-animation: left-bicep-action 2s linear infinite;
+			}
+			.left-forearm{
+				width: 52px;
+				height: 121px;
+				top: 99px;
+				left: 14px;
+				-webkit-transform-origin:15px 12px;
+				-webkit-animation: left-forearm-action 2s linear infinite;
+			}
+			
+			.left-thigh{
+				width: 69px;
+				height: 144px;
+				top: 250px;
+				left: 9px;
+				z-index: -2;
+				-webkit-transform-origin:33px 5px;
+				-webkit-animation: left-thigh-action 2s linear infinite;
+			}
+			.shin{
+				width: 53px;
+				height: 173px;
+				top: 115px;
+				left: 7px;
+				z-index: -2;
+				-webkit-transform-origin:26px 18px;
+				-webkit-animation: shin-action 2s linear infinite;
+			}
+			.foot{
+				width: 67px;
+				height: 34px;
+				top:150px ;
+				left:2px ;
+				-webkit-transform-origin:23px 21px;
+				-webkit-animation: foot-action 2s linear infinite;
+			}
+			.toes{
+				width: 28px;
+				height: 25px;
+				top: 9px;
+				left: 63px;
+				-webkit-transform-origin:0px 13px;
+				-webkit-animation: toes-action 2s linear infinite;
+			}
+			.right-thigh{
+				width: 69px;
+	            height: 144px;
+	            -webkit-transform-origin: 33px 5px;
+	            z-index: -2;
+	            left: 9px;
+	            top: 250px;
+	             -webkit-animation: right-thigh-action 2s linear infinite;
+			}
+			.right-shin{
+				width: 53px;
+				height: 173px;
+				top: 115px;
+				left: 7px;
+				z-index: -2;
+				-webkit-transform-origin:26px 18px;
+				-webkit-animation: right-shin-action 2s linear infinite;
+			}
+			.right-foot{
+				width: 67px;
+				height: 34px;
+				top:150px ;
+				left:2px ;
+				-webkit-transform-origin:23px 21px;
+				-webkit-animation: right-foot-action 2s linear infinite;
+			}
+			.right-toes{
+				width: 28px;
+				height: 25px;
+				top: 9px;
+				left: 63px;
+				-webkit-transform-origin:0px 13px;
+				-webkit-animation: right-toes-action 2s linear infinite;
+			}
+			.shadow{
+				top: 510px;
+				left: 0px;
+				-webkit-animation: shadow 2s linear infinite;
+			}
+	@-webkit-keyframes body-action{
+	0%{
+	-webkit-transform: rotate(5deg) translate( 5px, 0px);
+	}
+	25%{
+		-webkit-transform: rotate(5deg) translate(-5px, -14px);
+	}
+	50%{
+		-webkit-transform: rotate(5deg) translate( 5px, 0px);
+	}
+	75%{
+		-webkit-transform: rotate(5deg) translate(-5px, -14px);
+	}
+	100%{
+		-webkit-transform: rotate(5deg) translate( 5px, 0px);
+	}
+	}
+	@-webkit-keyframes right-bicep-action{
+	0%{
+		-webkit-transform: rotate(26deg);
+	}
+	50%{
+		-webkit-transform: rotate(-20deg);
+	}
+	100%{
+		-webkit-transform: rotate(26deg);
+	}
+	}
+	@-webkit-keyframes right-forearm-action{
+	0%{
+		-webkit-transform: rotate(-10deg);
+	}
+	50%{
+		-webkit-transform: rotate(-45deg);
+	}
+	100%{
+		-webkit-transform: rotate(-10deg);
+	}
+	}
+	@-webkit-keyframes left-bicep-action{
+	0%{
+		-webkit-transform: rotate(-20deg);
+	}
+	50%{
+		-webkit-transform: rotate(26deg);
+	}
+	100%{
+		-webkit-transform: rotate(20deg);
+	}
+	}
+	@-webkit-keyframes left-forearm-action{
+	0%{
+		-webkit-transform: rotate(-45deg);
+	}
+	50%{
+		-webkit-transform: rotate(-10deg);
+	}
+	100%{
+		-webkit-transform: rotate(-45deg);
+	}
+	}
+	
+	@-webkit-keyframes left-thigh-action{
+	0%{
+		-webkit-transform: rotate(10deg);
+	}
+	50%{
+		-webkit-transform: rotate(-45deg);
+	}
+	100%{
+		-webkit-transform: rotate(10deg);
+	}
+	} 
+		@-webkit-keyframes shin-action{
+	0%{
+		-webkit-transform: rotate(20deg);
+	}
+	25%{
+		-webkit-transform: rotate(85deg);
+	}
+	50%{
+		-webkit-transform: rotate(30deg);
+	}
+	75%{
+		-webkit-transform: rotate(20deg);
+	}
+	100%{
+		-webkit-transform: rotate(20deg);
+	}
+	}
+	@-webkit-keyframes foot-action{
+	0%{
+		-webkit-transform: rotate(-16deg);
+	}
+	25%{
+		-webkit-transform: rotate(-10deg);
+	}
+	50%{
+		-webkit-transform: rotate(-5deg);
+	}
+	75%{
+		-webkit-transform: rotate(-7deg);
+	}
+	100%{
+		-webkit-transform: rotate(-16deg);
+	}
+	}
+		@-webkit-keyframes toes-action{
+	0%{
+		-webkit-transform: rotate(-10deg);
+	}
+	25%{
+		-webkit-transform: rotate(-25deg);
+	}
+	50%{
+		-webkit-transform: rotate(0deg);
+	}
+	75%{
+		-webkit-transform: rotate(-10deg);
+	}
+	100%{
+		-webkit-transform: rotate(-10deg);
+	}
+	}
+	
+		@-webkit-keyframes right-thigh-action{
+	0%{
+		-webkit-transform: rotate(-45deg);
+	}
+	50%{
+		-webkit-transform: rotate(10deg);
+	}
+	100%{
+		-webkit-transform: rotate(-45deg);
+	}
+	}
+		@-webkit-keyframes right-shin-action{
+	0%{
+		-webkit-transform: rotate(20deg);
+	}
+	25%{
+		-webkit-transform: rotate(20deg);
+	}
+	50%{
+		-webkit-transform: rotate(30deg);
+	}
+	75%{
+		-webkit-transform: rotate(85deg);
+	}
+	100%{
+		-webkit-transform: rotate(20deg);
+	}
+	}
+	@-webkit-keyframes right-foot-action{
+	0%{
+		-webkit-transform: rotate(-16deg);
+	}
+	25%{
+		-webkit-transform: rotate(-7deg);
+	}
+	50%{
+		-webkit-transform: rotate(-5deg);
+	}
+	75%{
+		-webkit-transform: rotate(-10deg);
+	}
+	100%{
+		-webkit-transform: rotate(-16deg);
+	}
+	}
+		@-webkit-keyframes right-toes-action{
+	0%{
+		-webkit-transform: rotate(-10deg);
+	}
+	25%{
+		-webkit-transform: rotate(-10deg);
+	}
+	50%{
+		-webkit-transform: rotate(0deg);
+	}
+	75%{
+		-webkit-transform: rotate(-25deg);
+	}
+	100%{
+		-webkit-transform: rotate(-10deg);
+	}
+	}
+	 @-webkit-keyframes shadow{
+    0%   { opacity: 1; }
+    25%  { opacity: 0.75; }
+    50%  { opacity: 1; }
+    75%  { opacity: 0.75; }
+    100% { opacity: 1; }
+}
+	
+		</style>
+	</head>
+	<body>
+		<div class="body">
+			<img src="img/torso.png">
+			<div class="right-bicep">
+				<img src="img/right-bicep.png">
+				<div class="right-forearm">
+				<img src="img/right-forearm.png">
+			   </div>
+			</div>
+			<div class="left-bicep">
+					<img src="img/left-bicep.png">
+					<div class="left-forearm">
+						<img src="img/left-forearm.png">
+					</div>
+			</div>
+			<div class="left-thigh">
+				<img src="img/left-thigh.png">
+				<div class="shin">
+					<img src="img/shin.png">
+					<div class="foot">
+						<img src="img/foot.png">
+						<div class="toes">
+							<img src="img/toes.png">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="right-thigh">
+				<img src="img/right-thigh.png">
+				<div class="right-shin">
+					<img src="img/shin.png">
+					<div class="right-foot">
+						<img src="img/foot.png">
+						<div class="right-toes">
+							<img src="img/toes.png">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="shadow">
+				<img src="img/shadow.png">
+			</div>
+		</div>
+	</body>
+</html>
